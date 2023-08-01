@@ -1,0 +1,5 @@
+/venv/
+/reviews/migrations/
+/reviews/__pycache__/
+/__pycache__/
+/.idea/
