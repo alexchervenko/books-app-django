@@ -45,7 +45,7 @@ class Book(models.Model):
 
 
 class Contributor(models.Model):
-    firsts_names = models.CharField(
+    first_names = models.CharField(
         max_length=50,
         help_text="The contrib"
     )

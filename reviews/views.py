@@ -1,9 +1,17 @@
 from django.shortcuts import render
 
-def index(request):
-    name = "world"
-    return render(request, "base.html", {"name": name})
+from reviews.models import Book
 
-def search(request):
-    search = request.GET.get('search')
-    return render(request, "search.html", {"search": search})
+
+def index(request):
+    return render(request, "base.html")
+
+
+def book_list(request):
+    list_of_books = Book.objects.all()
+    return render(request, "books_list.html", {"list_of_books": list_of_books})
+
+
+# def book_search(request):
+#     search_text = request.GET.get("search", "")
+#     return render(request, "reviews/search-results.html", {"search_text": search_text})
