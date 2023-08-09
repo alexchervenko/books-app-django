@@ -15,9 +15,6 @@ class Publisher(models.Model):
         help_text="email"
     )
 
-    def __str__(self):
-        return self.name
-
 
 class Book(models.Model):
     title = models.CharField(
@@ -40,9 +37,6 @@ class Book(models.Model):
         through="BookContributor"
     )
 
-    def __str__(self):
-        return self.title
-
 
 class Contributor(models.Model):
     first_names = models.CharField(
@@ -56,9 +50,6 @@ class Contributor(models.Model):
     email = models.EmailField(
         help_text="The contact email"
     )
-
-    def __str__(self):
-        return self.firsts_names
 
 
 class BookContributor(models.Model):
